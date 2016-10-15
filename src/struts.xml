@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts><!--根节点-->
+        <constant name="struts.i18n.encoding" value="gb2312"></constant>
+        <package name="struts2" extends="struts-default">
+            <action name="login" class="com.exam.action.LoginAction">
+                <!--进入考试页面-->
+                <result name="studentSuccess" type="chain">getRandomSubject</result>
+                <!--老师登录成功页面-->
+                <result name="teacherSuccess" type="redirect">/teacher/index.html</result>
+                    <result name="input">/login.jsp</result><!--登录失败-->
+
+            </action>
+
+            <action name="subjectAdd" class="com.exam.action.SubjectAddAction">
+                <result name="success" type="redirect">/teacher/subjectAdd.jsp</result>
+                <result name="input" >/teacher/subjectAdd.jsp</result>
+            </action>
+
+
+
+        </package>
+
+
+
+</struts>

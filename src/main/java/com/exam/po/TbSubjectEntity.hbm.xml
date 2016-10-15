@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.exam.po.TbSubjectEntity" table="tb_subject" schema="" catalog="db_examsystem">
+        <id name="subjectId" column="subjectID"/>
+        <property name="subjectTitle" column="subjectTitle"/>
+        <property name="subjectOptionA" column="subjectOptionA"/>
+        <property name="subjectOptionB" column="subjectOptionB"/>
+        <property name="subjectOptionC" column="subjectOptionC"/>
+        <property name="subjectOptionD" column="subjectOptionD"/>
+        <property name="subjectAnswer" column="subjectAnswer"/>
+        <property name="subjectParse" column="subjectParse"/>
+    </class>
+</hibernate-mapping>
